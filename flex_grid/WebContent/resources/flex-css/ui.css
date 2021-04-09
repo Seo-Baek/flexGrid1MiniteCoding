@@ -1,0 +1,139 @@
+@charset "utf-8";
+
+.menu{
+	display: flex;
+}
+
+.menu-item{
+	background: gold;
+	width: 25%;
+	/*별 차이 없는 경우ie 때문에 flex-grow 대신 width가 낫다*/
+	transition: 0.5s;
+}
+.menu-item:hover{
+	width: 35%;
+	background: crimson;
+}
+
+.menu-link{
+	display: block;
+	padding: 1em;
+	font-size: 1.2rem;
+	font-weight: bold;
+	color: #555;
+	text-decoration: none;
+	text-align: center;
+}
+/*search*/
+.search-form{
+	display: flex;
+	height: 40px;
+}
+.search{
+	flex: 1;
+	margin-right: 10px;
+	border: 0;
+	border-radius: 0.3em;
+	font-size: 1rem;
+}
+.search-submit{
+	width: 4em;
+	border: 0;
+	border-radius: 0.3em;
+	font-size: 1rem;
+	background: gold;
+}
+/*bullet list*/
+.info-list-item{
+	margin:0.5em 0;
+	display: flex;
+}
+.info-list-item:before{
+	content : '✅';
+	margin-right: 0.5em;
+}
+/*message*/
+.user-item{
+	display: flex;
+	margin-bottom: 1.5em;
+}
+.user-photo{
+	width:50px;
+	height: 50px;
+	border: 2px solid #333;
+	border-radius: 50%;
+	background-color: gold;
+	background-repeat: no-repeat;
+	background-position: top;
+	background-size: 150%; 
+	flex-shrink:0;
+	margin-right: .5em;
+}
+/*friend list*/
+.friend-item{
+	align-items: center;
+}
+.user-name{
+	/*세 개는 세트.. 말줄임표 방법!*/
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+/*modal*/
+.modal{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	left:0;
+	right:0;
+	top:0;
+	bottom:0;
+	background: rgba(0,0,0,0.3);
+}
+.dialog{
+	width: 50vw;
+	padding: 2em;
+	border-radius: 1em;
+	background: #fff;
+}
+/*cardList*/
+.card-item{
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 2rem;
+}
+.card-image{
+	padding-bottom: 60%;
+	height: 0;
+	background-color: lightgray;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+}
+.card-image img {
+	display: none;
+}
+.card-desc{
+	flex: 1 1 auto;
+	padding: 1em;
+	background: #fff;
+}
+
+@media(min-width: 600px){
+	.card-list{
+		display:flex;
+		flex-wrap: wrap;
+		/*justify-content: space-between; 3단 콘텐츠 2개일 경우 가운데가 빔*/
+		padding: 0 -1rem;
+	}
+	.card-item{
+		width: 50%;
+		padding: 0 1rem;
+	}
+}
+@media(min-width: 1200px){
+	.card-item{
+		width: 33.3333%;
+	}
+}

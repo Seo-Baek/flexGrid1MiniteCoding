@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Insert title here</title>
+<link rel="icon" href="data:;base64,iVBORw0KGgo="><!-- 파비콘 없음! -->
+<link rel="stylesheet" href="../resources/grid-css/default.css" />
+<title>Insert title here</title>
+<style>
+	.grid-container{
+		display: -ms-grid;
+		display: grid;
+		/* IE의 repeat 함수는 다르게 생김! */
+		-ms-grid-columns: (1fr)[3];
+		-ms-grid-rows: (1fr)[3];/* columns 정해주면 이정도는 안해줘도 되는 듯 함..? */
+		grid-template-columns: repeat(3,1fr);
+	}
+	.grid-item:nth-child(1){
+		-ms-grid-column: 1;
+		-ms-grid-row: 1;
+	}
+	.grid-item:nth-child(2){
+		-ms-grid-column: 2;
+		-ms-grid-row: 1;
+	}
+	.grid-item:nth-child(3){
+		-ms-grid-column: 3;
+		-ms-grid-row: 1;
+	}
+	.grid-item:nth-child(4){
+		-ms-grid-column: 1;
+		-ms-grid-row: 2;
+	}
+	.grid-item:nth-child(5){
+		-ms-grid-column: 2;
+		-ms-grid-row: 2;
+	}
+	.grid-item:nth-child(6){
+		-ms-grid-column: 3;
+		-ms-grid-row: 2;
+	}
+	.grid-item:nth-child(7){
+		-ms-grid-column: 1;
+		-ms-grid-row: 3;
+	}
+	.grid-item:nth-child(8){
+		-ms-grid-column: 2;
+		-ms-grid-row: 3;
+	}
+	.grid-item:nth-child(9){
+		-ms-grid-column: 3;
+		-ms-grid-row: 3;
+	}
+</style>
+</head>
+<body>
+	<div class="grid-container">
+		<div class="grid-item">A</div>
+		<div class="grid-item">B</div>
+		<div class="grid-item">C</div>
+		<div class="grid-item">D</div>
+		<div class="grid-item">E</div>
+		<div class="grid-item">F</div>
+		<div class="grid-item">G</div>
+		<div class="grid-item">H</div>
+		<div class="grid-item">I</div>
+	</div>
+</body>
+</html>

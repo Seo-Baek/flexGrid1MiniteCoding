@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../resources/grid-css/default.css" />
+<style>
+	.grid-container{
+		display: grid;
+		/* grid-template-columns: repeat(3, minmax(200px,auto)); */
+		/* grid-template-columns: repeat(auto-fill, minmax(20%, auto)); */
+		/* autofill 사용 시 media 쿼리 없이 반응형 가능*/
+		grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+		
+	}
+	/* .grid-item{
+		display: inline;
+	} */
+	
+</style>
+</head>
+<body>
+	 <div class="grid-container">
+	 	<div class="grid-item">A</div>
+	 	<div class="grid-item">B</div>
+	 	<div class="grid-item">C</div>
+	 	<!-- autofill - px로 minmax 고정시키면 container 공간을 다 못 채움 -->
+	 	<!-- autofit을 사용하면 px로 지정하고 갯수가 모자라도 container를 다 채운다. -->
+	 	<!-- <div class="grid-item">D</div>
+	 	<div class="grid-item">E</div>
+	 	<div class="grid-item">F</div>
+	 	<div class="grid-item">G</div>
+	 	<div class="grid-item">H</div>
+	 	<div class="grid-item">I</div> -->
+	 </div>
+</body>
+</html>

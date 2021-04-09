@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../resources/grid-css/default.css" />
+<style>
+	.grid-container{
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		/*minmax(param1, param2) param1: 최소값 , param2: 최대값*/
+		/* grid-template-rows: repeat(2, minmax(100px, auto)); */
+	}
+	/* .grid-item{
+		display: inline;
+	} */
+	
+</style>
+</head>
+<body>
+	 <div class="grid-container">
+	 	<div class="grid-item">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras a.</div>
+	 	<div class="grid-item">B</div>
+	 	<div class="grid-item">C</div>
+	 	<div class="grid-item">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras semper lectus ut sem aliquet, volutpat fermentum nunc finibus. Nullam auctor augue sit amet posuere ultricies. Nunc eget pharetra nisi. Morbi id odio purus. Etiam et elit a sem ultricies placerat quis a metus. Vivamus tincidunt porta turpis nec rhoncus. Donec id elit et est tempus tincidunt. Nullam condimentum malesuada orci, in auctor risus pulvinar non. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia.</div>
+	 	<div class="grid-item">E</div>
+	 	<div class="grid-item">F</div>
+	 	<div class="grid-item">G</div>
+	 	<div class="grid-item">H</div>
+	 	<div class="grid-item">I</div>
+	 </div>
+</body>
+</html>

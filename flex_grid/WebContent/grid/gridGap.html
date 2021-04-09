@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../resources/grid-css/default.css" />
+<style>
+	.grid-container{
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: repeat(3, minmax(200px, auto));
+		/* gap : 20px; */
+		/* grid-gap: 20px 예전 방식*/ 
+		/* row-gap : 20px;
+		column-gap: 10px; */
+		/* IE는 gap이 없음. IE도 지원해야한다면 마진이나 공백용 셀 추가하는 방식으로 만들어야 함*/
+	}
+	/* .grid-item{
+		display: inline;
+	} */
+	
+</style>
+</head>
+<body>
+	<!-- 
+		row-gap : 행과 행 사이의 간격
+		column-gap : 열과 열 사이의 간격
+		gap : 둘 다(최신은 gap 레거시는 grid-gap grid-gap만 지원하는 경우도 있음)
+		grid-gap도 transition, animation이 가능하나 브라우저마다 다름.
+	 -->
+	 <div class="grid-container">
+	 	<div class="grid-item">A</div>
+	 	<div class="grid-item">B</div>
+	 	<div class="grid-item">C</div>
+	 	<div class="grid-item">D</div>
+	 	<div class="grid-item">E</div>
+	 	<div class="grid-item">F</div>
+	 	<div class="grid-item">G</div>
+	 	<div class="grid-item">H</div>
+	 	<div class="grid-item">I</div>
+	 </div>
+</body>
+</html>

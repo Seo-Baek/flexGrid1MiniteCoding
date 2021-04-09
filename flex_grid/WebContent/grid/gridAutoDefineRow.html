@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../resources/grid-css/default.css" />
+<style>
+	.grid-container{
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		/* 세 줄까지만 적용 */
+		/* grid-template-rows: repeat(3, minmax(100px, auto)); */
+		grid-auto-rows: minmax(100px, auto);/* 자동이기 때문에 굳이 repeat 해 줄 필요 없음*/
+		gap: 1rem;
+	}
+	/* .grid-item{
+		display: inline;
+	} */
+	
+</style>
+</head>
+<body>
+	<!--
+		grid-auto : 통제를 벗어난 위치의 트랙 크기를 지정하는 속성
+		(통제를 벗어난 : template : repeat의 첫번쨰 파람 값을 벗어난 트랙)
+	  -->
+	 <div class="grid-container">
+	 	<div class="grid-item">A</div>
+	 	<div class="grid-item">B</div>
+	 	<div class="grid-item">C</div>
+	 	<div class="grid-item">D</div>
+	 	<div class="grid-item">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean vitae neque pellentesque tortor aliquam pellentesque. Praesent eleifend facilisis justo vel tincidunt. Aenean ac velit eget est condimentum posuere. Vestibulum mollis tristique turpis, at facilisis arcu aliquet faucibus. Vivamus fermentum eleifend tortor, nec finibus massa condimentum in. Nam semper sodales ultricies. Phasellus malesuada venenatis elementum. Morbi consectetur id ante eget tincidunt. Vivamus eu ultricies justo. Aliquam erat volutpat. Nunc enim tortor, pellentesque quis dapibus eget, tincidunt sit amet dolor. Nullam a.</div>
+	 	<div class="grid-item">F</div>
+	 	<div class="grid-item">G</div>
+	 	<div class="grid-item">H</div>
+	 	<div class="grid-item">I</div>
+	 	<div class="grid-item">F</div>
+	 	<div class="grid-item">G</div>
+	 	<div class="grid-item">H</div>
+	 	<div class="grid-item">I</div>
+	 </div>
+</body>
+</html>

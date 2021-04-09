@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../resources/grid-css/default.css" />
+<style>
+	.grid-container{
+		display: -ms-grid;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-auto-rows: minmax(100px, auto);
+		gap: 1rem;
+	}
+	.grid-item:nth-child(1){
+		grid-column-start: 1;
+		grid-column-end: 3; /* row 방향 rowspan2 지정 */
+		grid-row-start: 1;
+		grid-row-end: 4; /* column방향 colspan 3 지정*/
+		/* rowspan 혹은 colspan이 되었다고 line이 사라지지 않음.
+			grid-column: 1/3으로 첫 번째 셀을 변경 후 두번째 셀을 건들일 때도
+			grid-column: 3/4로 시작점을 3으로 지정해야 함!
+			-1일 경우 반대로 끝방향부터 시작 */
+	}
+	.grid-item:nth-child(3){
+		grid-column: 3;
+		grid-row: 2;	/* 버틸 수 있음! */
+	}
+	.grid-item:nth-child(4){/* nth번호를 2로 쓰면 CD와 B의 순서가 바뀜!*/
+		grid-column: 3; /* 한 칸만 차지하려는 경우 /n 생략 가능, 외부에서 뺏으려고 하는 경우 넣어주어야 버팀! */
+		grid-row: 3/5;
+		/* 3번에서 두 칸이요!*/
+		/* grid-row: 3/ span 3; */ 
+		grid-row: 2/ span 3; /* 침범할 수도 있다! */  
+		opacity: 0.7;/* C가 보인다..ㅋㅋ */
+	}
+</style>
+<link rel="icon" href="data:;base64,iVBORw0KGgo="><!-- 파비콘 없음! -->
+</head>
+<body>
+	<!--
+		각 셀 영역을 지정함
+		grid-column(rows)-start
+		grid-column(rows)-end
+		grid-column(rows) 새로안 것 web에 있음!
+	  -->
+	 <div class="grid-container">
+	 	<div class="grid-item">A</div>
+	 	<div class="grid-item">B</div>
+	 	<div class="grid-item">C</div>
+	 	<div class="grid-item">D</div>
+	 	<div class="grid-item">
+			Lorem, ipsum dolor sit amet consectetur adipisicing elit. Pariatur expedita nemo illum saepe id aliquam. Nisi voluptates quis reprehenderit inventore ad, dicta velit officia alias ullam quisquam, quae beatae, distinctio voluptatibus eveniet dolores facere blanditiis iusto illum! Molestiae qui, facere odio, veritatis quo, aspernatur cum eveniet maxime totam sunt harum.
+		</div>
+	 	<div class="grid-item">F</div>
+	 	<div class="grid-item">G</div>
+	 	<div class="grid-item">H</div>
+	 	<div class="grid-item">I</div>
+	 	<div class="grid-item">F</div>
+	 	<div class="grid-item">G</div>
+	 	<div class="grid-item">H</div>
+	 	<div class="grid-item">I</div>
+	 </div>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>Insert title here</title>
+<link rel="stylesheet" href="../resources/grid-css/default.css" />
+<style>
+	.grid-container{
+		display: grid;
+		/* grid-template-columns: 100px 300px 200px; */
+		/* grid-template-columns : 1fr 2fr 1fr; *//*fr : fraction*/
+		/* grid-template-columns: 1fr 500px 1fr; *//* 채울 수 있으면 알아서 늘어남*/
+		grid-template-columns: repeat(3, 1fr);
+		/* grid-template-columns: repeat(3, 1fr 2fr 1fr); */
+		/* 한주기를 몇번 반복할 것인가? 1fr 2fr 1fr(두번째 인자) 3번 반복(첫번째 인자)*/
+		grid-template-rows: 200px 200px;/*내가 지정한만큼만 영향이 있고 나머지는 auto*/
+		grid-template-rows: repeat(2, 1fr);/* 컨테이너 높이만큼에서 1만큼씩의 비율*/
+		/* 그리드는 아이템이 기본적으로 컨테이너를 꽉 채우려고 함*/
+		height: 80vh;
+	}
+	/* .grid-item{
+		display: inline;
+	} */
+	
+</style>
+</head>
+<body>
+	<!-- 
+		flex는 한방향, grid는 두 방향 정렬임
+		용어
+			- Grid Container
+			- Grid Item
+			- Grid Track(그리드의 행 또는 열)
+			- Grid Cell(그리드의 한 칸)
+			- Grid Line(그리드셀을 구분하는 선)
+			- Grid Number(그리드 라인의 각 번호)
+			- Grid Gap(그리드 셀 사이의 간격)
+			- Grid Area(그리드 라인으로 둘러싸인 사각형 영역)
+	 -->
+	 <div class="grid-container">
+	 	<div class="grid-item">A</div>
+	 	<div class="grid-item">B</div>
+	 	<div class="grid-item">C</div>
+	 	<div class="grid-item">D</div>
+	 	<div class="grid-item">E</div>
+	 	<div class="grid-item">F</div>
+	 	<div class="grid-item">G</div>
+	 	<div class="grid-item">H</div>
+	 	<div class="grid-item">I</div>
+	 </div>
+</body>
+</html>
